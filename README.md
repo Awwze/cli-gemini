@@ -25,5 +25,4 @@ bash install.sh
 
 ## To run cli-gemini you need to paste in terminal
 
-```bash
 cli-gemini
