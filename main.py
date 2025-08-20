@@ -9,10 +9,8 @@ GREEN = "\033[92m"
 CYAN = "\033[96m"
 RED = "\033[91m"
 
-# Путь к конфигу
 CONFIG_PATH = os.path.expanduser("~/.cli-gemini/api.conf")
 
-# Читаем API ключ
 if not os.path.exists(CONFIG_PATH):
     print(f"{RED}[Ошибка]{RESET} API ключ не найден.")
     print(f"Создай файл {CYAN}{CONFIG_PATH}{RESET} и вставь туда свой ключ (одной строкой).")
@@ -26,11 +24,9 @@ if not api_key.startswith("AIza"):
     print(f"{RED}[Ошибка]{RESET} В конфиге неправильный ключ!")
     exit(1)
 
-# Настройка
 genai.configure(api_key=api_key)
 model = genai.GenerativeModel("gemini-2.5-flash")
 
-# История чата
 chat_history = [
     {"role": "user", "parts": ["Ты — дружелюбный собеседник. Отвечай человечно, кратко и понятно."]}
 ]
