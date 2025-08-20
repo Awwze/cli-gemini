@@ -22,3 +22,8 @@ Clone this repository and run the installer:
 git clone https://github.com/Awwze/cli-gemini.git
 cd cli-gemini
 bash install.sh
+
+## To run cli-gemini you need to paste in terminal
+
+```bash
+cli-gemini
